@@ -1,3 +1,53 @@
+/* ====== Estilos mínimos para la tabla de solicitudes ====== */
+
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Título */
+h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Tabla */
+.table {
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+/* Hover suave en filas */
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Alerta cuando no hay solicitudes */
+.alert {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff !important; /* azul Bootstrap */
+  color: #fff !important;               /* texto blanco */
+  border: none !important;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3 !important;
+  color: #fff !important;
+}
 /* Reset básico */
 body {
   margin: 0;
@@ -283,3 +333,5 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+
