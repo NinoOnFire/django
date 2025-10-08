@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Galería{% endblock %}
+
+{% block content %}  
+<section class="imagen">
+    <h1>Galería de Imágenes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam, obcaecati ratione itaque...</p>
+
+    <div class="galeria">
+      {% for emp in mascotas %}
+      <div class="card-perro">
+        <img src="{% static '' %}{{ emp.foto }}" alt="{{ emp.nombre }}">        
+        <h2>{{ emp.nombre }}</h2>
+        <p><strong>Raza:</strong> {{ emp.raza }}</p>
+        <p><strong>Descripción:</strong> {{ emp.descripcion }}</p>
+      </div>
+      {% endfor %}
+    </div>
+</section>
+{% endblock %}

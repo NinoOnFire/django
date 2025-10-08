@@ -1,0 +1,285 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+nav h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Sección Galería */
+.imagen {
+  text-align: center;
+  padding: 30px;
+}
+
+.imagen h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.imagen p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Galería grid */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px 40px;
+  justify-items: center;
+}
+
+/* Tarjetas */
+.card-perro {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card-perro:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.card-perro img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Nombre debajo */
+.card-perro h2 {
+  margin-top: 8px;
+  font-size: 16px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+/* HERO con imagen de fondo */
+.hero {
+  background-image: url("images/perro-header.jpg"); /* Cambia por tu imagen */
+  background-size: cover;   /* Que cubra todo el ancho */
+  background-position: center;
+  height: 400px;            /* Altura de la sección */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Oscurecer un poco la imagen para que se lean los textos */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4); /* sombra oscura transparente */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* Para que quede sobre la sombra */
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero {
+  background-image: url("/static/images/tengo-un-perro-sh.jpg"); /* ajusta la ruta */
+  background-size: 1600px 500px; /* ancho x alto */
+  background-position: center; /* centrada */
+  height: 400px;               /* altura del header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-repeat: no-repeat; /* evita que se repita */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* oscurece un poco la imagen */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* para que el texto no quede debajo de la sombra */
+}
+
+/* Formulario de registro */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Título */
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.8rem;
+}
+
+/* Campos del formulario */
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Efecto cuando se selecciona el input */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255,102,0,0.3);
+}
+
+/* Botón */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #e65c00;
+}
+
+/* Mensajes de error Django */
+.errorlist {
+    color: red;
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.mapa {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.mapa h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
