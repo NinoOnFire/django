@@ -19,8 +19,11 @@
         <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
 
         {% if user.is_authenticated %}
-          <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
-          <li><a href="{% url 'solicitud' %}">solicitud</a></li>
+          <li><a href="{% url 'solicitud' %}">Solicitud</a></li>
+          <li><a href="{% url 'solicitudes' %}">Solicitudes</a>
+          </li><li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+
+
         {% else %}
           <li><a href="{% url 'login' %}">Login</a></li>
         {% endif %}
